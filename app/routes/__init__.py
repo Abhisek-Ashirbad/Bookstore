@@ -7,4 +7,4 @@
 # ==============================================================================
 
 # Imports
-from app.routes.book_handler import BookHandler
+from .book_handler import BookHandler

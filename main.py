@@ -20,8 +20,8 @@ bookhandler=BookHandler()
 app.include_router(bookhandler.router)
 
 if __name__ == "__main__":
-    import uvicorn
+    from uvicorn import run
     host = os.getenv("HOST", "localhost")
     port = int(os.getenv("PORT", 8000))
     workers = int(os.getenv("WORKERS", 1))
-    uvicorn.run(app, host=host, port=port, reload=True, workers=workers)
+    run(app, host=host, port=port, workers=workers)
